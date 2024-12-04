@@ -1,0 +1,649 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The site hosts the documentation for GS4PB application deployed on Cyverse VICE-DE">
+      
+      
+        <meta name="author" content="Vishnu Ramasubramanian / UMN-Lorenz-Group">
+      
+      
+        <link rel="canonical" href="https://foss.cyverse.org/">
+      
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.47">
+    
+    
+      
+        <title>GS4PB App Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.6f8fc17f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#complete-manual" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="GS4PB App Documentation" class="md-header__button md-logo" aria-label="GS4PB App Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GS4PB App Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CyVerse-learning-materials/foss" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GS4PBDocs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="GS4PB App Documentation" class="md-nav__button md-logo" aria-label="GS4PB App Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    GS4PB App Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CyVerse-learning-materials/foss" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GS4PBDocs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#welcome-to-the-gs4pb-wiki" class="md-nav__link">
+    <span class="md-ellipsis">
+      Welcome to the GS4PB wiki!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Welcome to the GS4PB wiki!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-gs4pb-previously-soygen2-app-implements-a-genomic-selection-pipeline-to-integrate-genotyping-phenotyping-and-envirotyping-data-the-pipeline-supports-gs-for-single-traits-and-multi-traits-across-single-and-multiple-environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      The GS4PB (Previously SOYGEN2) App implements a genomic selection pipeline to integrate genotyping, phenotyping, and envirotyping data. The pipeline supports GS for single traits and multi-traits across single and multiple environments.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#welcome-to-the-gs4pb-wiki" class="md-nav__link">
+    <span class="md-ellipsis">
+      Welcome to the GS4PB wiki!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Welcome to the GS4PB wiki!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-gs4pb-previously-soygen2-app-implements-a-genomic-selection-pipeline-to-integrate-genotyping-phenotyping-and-envirotyping-data-the-pipeline-supports-gs-for-single-traits-and-multi-traits-across-single-and-multiple-environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      The GS4PB (Previously SOYGEN2) App implements a genomic selection pipeline to integrate genotyping, phenotyping, and envirotyping data. The pipeline supports GS for single traits and multi-traits across single and multiple environments.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="complete-manual">Complete Manual<a class="headerlink" href="#complete-manual" title="Permanent link">&para;</a></h1>
+<h2 id="welcome-to-the-gs4pb-wiki">Welcome to the GS4PB wiki!<a class="headerlink" href="#welcome-to-the-gs4pb-wiki" title="Permanent link">&para;</a></h2>
+<h3 id="the-gs4pb-previously-soygen2-app-implements-a-genomic-selection-pipeline-to-integrate-genotyping-phenotyping-and-envirotyping-data-the-pipeline-supports-gs-for-single-traits-and-multi-traits-across-single-and-multiple-environments">The GS4PB (Previously SOYGEN2) App implements a genomic selection pipeline to integrate genotyping, phenotyping, and envirotyping data. The pipeline supports GS for single traits and multi-traits across single and multiple environments.<a class="headerlink" href="#the-gs4pb-previously-soygen2-app-implements-a-genomic-selection-pipeline-to-integrate-genotyping-phenotyping-and-envirotyping-data-the-pipeline-supports-gs-for-single-traits-and-multi-traits-across-single-and-multiple-environments" title="Permanent link">&para;</a></h3>
+<p><img alt="GS4PB_Intro" src="https://github.com/user-attachments/assets/6fb38883-0348-4fbc-a70f-e2130a6b148c" /></p>
+<h1 id="recommended-method-to-run-the-application">Recommended Method to Run the Application<a class="headerlink" href="#recommended-method-to-run-the-application" title="Permanent link">&para;</a></h1>
+<h2 id="i-using-the-docker-container">I. Using the Docker Container<a class="headerlink" href="#i-using-the-docker-container" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Install Docker Engine</strong>  </li>
+<li>Download and install the Docker engine for your operating system from <a href="https://docs.docker.com/engine/install/">here</a>.  </li>
+<li>Ensure the Docker engine is running when executing Docker commands.  </li>
+<li>
+<p>For a quick introduction to running Docker containers, check out this short video: <a href="https://docs.docker.com/get-started/introduction/get-docker-desktop/">Docker Desktop Introduction</a>.</p>
+</li>
+<li>
+<p><strong>Pull the Docker Image</strong><br />
+   <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>pull<span class="w"> </span>ivanvishnu/gs4pb:updated
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Run the Docker Container</strong><br />
+   a) <strong>On Git Bash (Windows)</strong>  </p>
+</li>
+<li>
+<p><strong>With Local Directory Binding</strong><br />
+     Replace <code>source</code> with your target directory:
+     <div class="highlight"><pre><span></span><code>winpty<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>--mount<span class="w"> </span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span><span class="nv">$HOME</span>/Downloads/,target<span class="o">=</span>/root/Results<span class="w"> </span>-it<span class="w"> </span>-p<span class="w"> </span><span class="m">3838</span>:3838<span class="w"> </span>ivanvishnu/gs4pb:updated
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Without Local Directory Binding</strong><br />
+     <div class="highlight"><pre><span></span><code>winpty<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>-p<span class="w"> </span><span class="m">3838</span>:3838<span class="w"> </span>ivanvishnu/gs4pb:updated
+</code></pre></div>
+     After execution, copy the results to your local directory using:
+     <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>cp<span class="w"> </span>&lt;container_id&gt;:/root/Results/<span class="w"> </span><span class="nv">$HOME</span>/Downloads/
+</code></pre></div></p>
+</li>
+</ol>
+<p>b) <strong>On Other Systems</strong><br />
+   Replace <code>source</code> with your target directory:
+   <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>--mount<span class="w"> </span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span><span class="nv">$HOME</span>/Downloads/,target<span class="o">=</span>/root/Results<span class="w"> </span>-it<span class="w"> </span>-p<span class="w"> </span><span class="m">3838</span>:3838<span class="w"> </span>ivanvishnu/gs4pb:updated
+</code></pre></div></p>
+<ol>
+<li><strong>Access the Application</strong><br />
+   Open your browser and navigate to <a href="http://localhost:3838/">http://localhost:3838/</a>.</li>
+</ol>
+<hr />
+<h2 id="ii-installing-and-running-the-application-in-rstudio">II. Installing and Running the Application in RStudio<a class="headerlink" href="#ii-installing-and-running-the-application-in-rstudio" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Clone the repository using Git:<br />
+   <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/UMN-Lorenz-Group/GS4PB.git
+</code></pre></div></p>
+</li>
+<li>
+<p>Open the <code>App/app.R</code> file in RStudio and run the application.</p>
+</li>
+<li>
+<p>Follow the app’s guided instructions and move through the tabs for sequential implementation of pipeline steps.</p>
+</li>
+</ol>
+<hr />
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<h3 id="the-gs-pipeline-involves-steps-starting-from-data-management-to-making-selection-decisions-based-on-genome-estimated-breeding-values-the-schematic-below-depicts-the-steps-in-the-pipeline">The GS pipeline involves steps starting from data management to making selection decisions based on genome estimated breeding values. The schematic below depicts the steps in the pipeline.<a class="headerlink" href="#the-gs-pipeline-involves-steps-starting-from-data-management-to-making-selection-decisions-based-on-genome-estimated-breeding-values-the-schematic-below-depicts-the-steps-in-the-pipeline" title="Permanent link">&para;</a></h3>
+<p><img alt="PipelinePic_for_Wiki_V2" src="https://github.com/UMN-Lorenz-Group/GS4PB/assets/12753252/4d19f5ca-1443-461b-a837-78b9e813ae93" /></p>
+<h2 id="genotypic-data-processing">Genotypic Data Processing<a class="headerlink" href="#genotypic-data-processing" title="Permanent link">&para;</a></h2>
+<h3 id="data-upload">Data Upload<a class="headerlink" href="#data-upload" title="Permanent link">&para;</a></h3>
+<p>Genotypic data can be loaded in VCF file format. The genotypic data file should contain both the training data set and target data set, if any. It is also possible to upload just the file with training data set. If the data contains target set data, you also need to upload target line IDs in .csv format. Once uploaded, you need to select the column containing the strain IDs for the target set.</p>
+<h3 id="filter-data">Filter Data<a class="headerlink" href="#filter-data" title="Permanent link">&para;</a></h3>
+<p>Once uploaded the genotypic data can be processed further, sites (markers) in the genotype table can be filtered on minimum site fraction and minor allele frequency. Minimum site fraction corresponds to the threshold fraction of lines for which the markers can have missing values. For example, if you set it to 0.8, all the markers that have missing values in more than 80% of the lines will be removed. Taxa (lines/genotypes) can be filtered on minimum not missing, which corresponds to the fraction of markers for which the lines can have missing values. </p>
+<h3 id="impute-missing-genotype-scores">Impute missing genotype scores<a class="headerlink" href="#impute-missing-genotype-scores" title="Permanent link">&para;</a></h3>
+<p>Missing genotypic scores can be imputed using three methods. 
+1. LD-k-Nearest Neighbor Imputation (LDKNN) method, which has two parameters : number of high LD sites and number of neighboring samples. The default values are set to 30 and 10 respectively. </p>
+<ol>
+<li>
+<p>Numeric imputation method, which has two parameters: number of nearest neighbors (default value of 5) and distance method that includes 'euclidean', 'manhattan' and 'cosine'.</p>
+</li>
+<li>
+<p>AlpaPlantImpute method, which is a more involved method. It has two steps that includes a haplotype library build step and imputation step. The haplotype build step has three parameters: number of haplotypes, number of sample rounds, and non-missing threshold for high density genotypes. 
+Once the haplotype library is built, the user can perform pedigree based or population based imputation. For pedigree based imputation, the user needs to upload a founders file. If no founder file is uploaded, the program implements a population based imputation method. </p>
+</li>
+</ol>
+<p>The imputed genotype table can be exported for further exploratory analysis, if required.  </p>
+<p>Note: There are checkboxes in the filter and imputation page that allows user to select the table that must be used for the remaining steps. </p>
+<h2 id="phenotypic-data-processing">Phenotypic Data Processing<a class="headerlink" href="#phenotypic-data-processing" title="Permanent link">&para;</a></h2>
+<h3 id="data-upload_1">Data Upload<a class="headerlink" href="#data-upload_1" title="Permanent link">&para;</a></h3>
+<p>Phenotypic data from single and multi-environmental trials can be uploaded in CSV format. Tick the checkbox to load data from multi-environmental trials. Once you upload the file, the input tabs in the sidebar will be filled with information. The user needs to select the trait columns and columns with strain IDs and 'uniqID' column in the data table. The unique ID column is generally a combination of multiple factors such as Strain, Location and others such as Test, etc.. Once you set it, you can check if the unique ID column has as many unique IDs as the number of unique entries. </p>
+<p>After that, the user must select one or more traits for further analysis including cross validation and genomic prediction. A summary range of trait values are printed in the message box. For multi-env trial data, a plot with distribution of trait values across all the locations in the data is generated. </p>
+<p>Once you select a trait, the genotypic and phenotypic data are merged to create a merged data set. </p>
+<h3 id="enviromics-data">Enviromics Data<a class="headerlink" href="#enviromics-data" title="Permanent link">&para;</a></h3>
+<p>This is an optional step for users who want to use enviromics covariates in their GP models that include GxE effects.<br />
+In this panel, the user can extract several environmental variables for temperature, precipitation, radiation and also soil variables from public databases. The current version uses the pipeline implemented in the 'EnvRtype' package to extract this data from NASA POWER database and altitude is extracted from SRTM. </p>
+<p>The user needs to upload the coordinates file for the locations in the following format: </p>
+<html xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 15">
+<style>
+<!--tr
+    {mso-height-source:auto;}
+col
+    {mso-width-source:auto;}
+td
+    {padding-top:1.0px;
+    padding-right:1.0px;
+    padding-left:1.0px;
+    mso-ignore:padding;
+    color:windowtext;
+    font-size:18.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Arial;
+    mso-generic-font-family:auto;
+    mso-font-charset:0;
+    text-align:general;
+    vertical-align:bottom;
+    border:none;
+    mso-background-source:auto;
+    mso-pattern:auto;}
+.oa1
+    {border-top:1.0pt solid white;
+    border-right:1.0pt solid white;
+    border-bottom:3.0pt solid white;
+    border-left:1.0pt solid white;
+    background:#156082;
+    mso-pattern:auto none;
+    text-align:center;
+    padding-left:.5pt;
+    padding-top:.5pt;
+    padding-right:.5pt;}
+.oa2
+    {border-top:3.0pt solid white;
+    border-right:1.0pt solid white;
+    border-bottom:1.0pt solid white;
+    border-left:1.0pt solid white;
+    background:#CCD2D8;
+    mso-pattern:auto none;
+    text-align:center;
+    padding-left:.5pt;
+    padding-top:.5pt;
+    padding-right:.5pt;}
+.oa3
+    {border:1.0pt solid white;
+    background:#E7EAED;
+    mso-pattern:auto none;
+    text-align:center;
+    padding-left:.5pt;
+    padding-top:.5pt;
+    padding-right:.5pt;}
+-->
+</style>
+</head>
+
+<body>
+<!--StartFragment-->
+
+
+Location | Country | Lat | Long | OtherLocName | LocName
+-- | -- | -- | -- | -- | --
+Becker-MN | USA1 | 45.393 | -93.878 | BE | Becker
+Crookston-MN | USA1 | 47.775 | -96.606 | CR | Crookston
+
+
+
+<!--EndFragment-->
+</body>
+
+</html>
+
+<p>The user also needs to set the start and end date for daily weather data collection. In addition, the user can choose to get processed weather data and choose the kernel (linear or gaussian) for environmental relationship. If the user wants to use the location names in the OtherLocName column in the environmental relationship heatmap, check the use otherlocnames checkbox. </p>
+<h2 id="training-set-optimization-using-stpga-selection-of-training-sets-using-genetic-algorithms">Training Set Optimization using STPGA (Selection of Training Sets using Genetic Algorithms)<a class="headerlink" href="#training-set-optimization-using-stpga-selection-of-training-sets-using-genetic-algorithms" title="Permanent link">&para;</a></h2>
+<p>A training population for genomic prediction is selected by optimizing an objective function using a genetic algorithm.
+The optimization method uses the 'GenAlgForSubsetSelection' function implemented in the 'STPGA' R package (Akdemir 2017).
+In this implementation, the parameters for the genetic algorithm are set to default values. The user needs to set the candidate and training population size. Candidate population refers to the set of genotypes with phenotypic data. The default size is set to the number of genotypes in the input genotypic data that are not in the target population set. Training population size refers to the number of genotypes that are to be selected in the training population. The default value is set to 80% of the candidate set. </p>
+<h2 id="cross-validation-cv">Cross Validation (CV)<a class="headerlink" href="#cross-validation-cv" title="Permanent link">&para;</a></h2>
+<h3 id="single-trait-cv">Single Trait CV<a class="headerlink" href="#single-trait-cv" title="Permanent link">&para;</a></h3>
+<p>For single trait genomic prediction models, the user can k-fold cross validation for single trait using the 'bWGR' package. We've preselected three models out of the many available in the package. </p>
+<h3 id="multi-trait-cv">Multi-trait CV<a class="headerlink" href="#multi-trait-cv" title="Permanent link">&para;</a></h3>
+<p>For multi-trait genomic prediction models, k-fold CV is performed for three models implemented in the 'BGLR' package including BRR, RKHS, and Spikes-slab. This allows the user to evaluate the available models and select the model with the best prediction accuracy for genomic prediction. The parameters to set include the number of folds 'k' and the number of replicates. </p>
+<h3 id="multi-environmental-cv">Multi-environmental CV<a class="headerlink" href="#multi-environmental-cv" title="Permanent link">&para;</a></h3>
+<p>For multi-environmental data, the user can perform five cross validation schemes to select the best model for his/her objective. Currently, the GP models implemented in the BGGE/EnvRtype packages are compared in the cross validation schemes. Three main models with "Main Effect (G+E)", "Homogeneous Variance (G+E+GxE)","Heterogeneous Variance (G+E+GxEi)" with and without enviromic covariates are compared.  </p>
+<p>The five CV schemes include: </p>
+<ol>
+<li>CV1, where novel genotypes in tested environments are predicted.</li>
+<li>CV2, where tested genotypes in tested environments are predicted.</li>
+<li>CV0, where tested genotypes in untested novel environments are predicted.</li>
+<li>CV00, where novel genotypes in novel environments are predicted.</li>
+<li>CV LOFO (Leave One Factor Out), eg: Leave One Test Out/ Leave One Line Out cross validation. </li>
+</ol>
+<h2 id="genomic-prediction">Genomic Prediction<a class="headerlink" href="#genomic-prediction" title="Permanent link">&para;</a></h2>
+<h3 id="single-trait-genomic-prediction">Single trait genomic prediction<a class="headerlink" href="#single-trait-genomic-prediction" title="Permanent link">&para;</a></h3>
+<p>Single trait genomic prediction is performed using methods implemented in the 'bWGR' package. rrBLUP method is implemented using the 'rrBLUP' (Endelman 2011) package. Expectation maximization based Ridge Regression, BayesB and BayesLASSO methods are implemented using the bWGR package (Xavier et al. 2020). The output table contains sorted predicted values and an upper bound of reliability (Yu et al., 2016).  </p>
+<h3 id="multi-trait-genomic-prediction">Multi-trait genomic prediction<a class="headerlink" href="#multi-trait-genomic-prediction" title="Permanent link">&para;</a></h3>
+<p>Currently, multi-trait genomic prediction is performed using methods implemented in the 'BGLR' package. The Multitrait function in BGLR implements Bayesian Ridge Regression, RKHS, and Spike-Slab methods (Perez-Rodriguez P and de Los Campos G, 2022). Multi-trait GBLUP is implemented using the 'mmer' function in 'sommer' package (Covarrubias-Pazaran G 2016). </p>
+<h3 id="multi-environmental-genomic-prediction">Multi-environmental genomic prediction<a class="headerlink" href="#multi-environmental-genomic-prediction" title="Permanent link">&para;</a></h3>
+<p>Environments are defined as combinations of year and locations in which phenotypic data are collected.                                                 Multi-environmental models are implemented using the EnvRType/BGGE pipeline as well as 'mmer' function in 'sommer' package.
+Fit genomic prediction models taking into account only the main effects or the main effects + GxE effects. The user needs to select one or many years and locations and the type of variance-covariance structure for fitting the model.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    2024-12-04
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 - 2024
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
