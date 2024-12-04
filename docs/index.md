@@ -190,66 +190,11 @@ Crookston-MN | USA1 | 47.775 | -96.606 | CR | Crookston
 The user also needs to set the start and end date for daily weather data collection. In addition, the user can choose to get processed weather data and choose the kernel (linear or gaussian) for environmental relationship. If the user wants to use the location names in the OtherLocName column in the environmental relationship heatmap, check the use otherlocnames checkbox. 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Training Set Optimization using STPGA (Selection of Training Sets using Genetic Algorithms) 
 
 A training population for genomic prediction is selected by optimizing an objective function using a genetic algorithm.
 The optimization method uses the 'GenAlgForSubsetSelection' function implemented in the 'STPGA' R package (Akdemir 2017).
 In this implementation, the parameters for the genetic algorithm are set to default values. The user needs to set the candidate and training population size. Candidate population refers to the set of genotypes with phenotypic data. The default size is set to the number of genotypes in the input genotypic data that are not in the target population set. Training population size refers to the number of genotypes that are to be selected in the training population. The default value is set to 80% of the candidate set. 
-
-
 
 
 ## Cross Validation (CV)
